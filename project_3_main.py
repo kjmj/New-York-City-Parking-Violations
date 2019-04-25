@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-df = pd.read_csv('C:\\Users\\Noah Parker\\Documents\\Social_Imps_Data\\Year_2017.csv', nrows=10000)
+df = pd.read_csv('data/csv/ParkingViolations2015-Partial.csv', nrows=10000)
 
 columnHeaders = list(df.columns.values)
 print(columnHeaders)
