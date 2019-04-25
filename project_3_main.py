@@ -3,6 +3,11 @@ import pandas as pd
 
 df = pd.read_csv('data/csv/ParkingViolations2015-Partial.csv', nrows=10000)
 
+census2015 = (pd.read_csv('data/csv/census2015.csv', skiprows=1)).drop(["Id", "Id2"], axis=1)
+census2016 = (pd.read_csv('data/csv/census2015.csv', skiprows=1)).drop(["Id", "Id2"], axis=1)
+census2017 = (pd.read_csv('data/csv/census2015.csv', skiprows=1)).drop(["Id", "Id2"], axis=1)
+
+
 columnHeaders = list(df.columns.values)
 print(columnHeaders)
 
@@ -72,7 +77,25 @@ for key in valueDictionary:
 print("COMBINED/PROCESSED VALUES:");
 for key in combinedValuesDictionary:
      print(key, ": ", combinedValuesDictionary[key])
-                         
+
+countyCheck: int = 0
+for index, row in census2015.iterrows():
+   # for key in countyTranslations:
+   #      print(row["Geography"].split("County")[0])
+   #      print(countyTranslations[key])
+   #      print(row["Geography"].split("County")[0] == countyTranslations[key])
+   #      if row["Geography"].split("County")[0] in countyTranslations[key]:
+   #          print(row["Geography"].split("County")[0])
+   #          print(countyTranslations[key])
+   #          print(row["Geography"].split("County")[0] in countyTranslations[key])
+   #          countyCheck = 1
+   #
+   # if countyCheck == 0:
+   #      census2015 = census2015[census2015.Geography != row["Geography"]]
+   #      countyCheck = 0
+   # else:
+   census2015.Geography = census2015.Geography.replace(to_replace=row["Geography"], value=row["Geography"].split("County")[0])
+print(census2015)
 #for row in df.itertuples(index=True, name='Pandas'):
  #    getattr(row, "Registration State") 
   #   county = getattr(row, "Violation County")
