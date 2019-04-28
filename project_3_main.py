@@ -1,7 +1,7 @@
 import pandas as pd
 
 # read in our csv
-df = pd.read_csv('data/csv/ParkingViolations2015-Partial.csv', nrows=10000)
+df = pd.read_csv('data/csv/nyc-parking-violations-partial-2015.csv', nrows=10000)
 
 # define map from county code to full name
 countyTranslations = {
