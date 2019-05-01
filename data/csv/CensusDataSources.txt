@@ -1,0 +1,11 @@
+Employment
+https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_17_5YR_S2301&prodType=table
+
+PerCapita Income
+https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_17_5YR_B19301&prodType=table
+
+Mean Income
+https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_17_5YR_S1902&prodType=table
+
+Median Income
+https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_17_5YR_S1903&prodType=table
